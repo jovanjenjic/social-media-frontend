@@ -20,7 +20,7 @@ export default function Messenger () {
   const socket = useRef();
 
   useEffect(() => {
-    socket.current = io("wss://social-media-socket-example.herokuapp.com/");
+    socket.current = io("wss://social-media-socket-example.herokuapp.com");
     socket.current.on('getMessage', data => {
       setArrivalMessage({
         sender: data.senderId,
